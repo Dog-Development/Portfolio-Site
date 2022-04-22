@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+body{
+    margin: 0;
+}
+h1{
+    margin: 0%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto Slab';
+    line-height: 60px;
+    background-color: #A133F5;
+    color: rgb(0, 0, 0);
+}
+nav{
+    background-color: black;
+    display: flex;
+}
+.navroot{
+    justify-content: space-evenly;
+    width: 100%;
+    align-content: center;
+    font-family: 'Open Sans';
+    display: flex;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+li>p{
+    margin: 0;
+}
+.navsubbutton{
+    color: white;
+    height:60px;
+}
+.navsubbutton:hover + .navsubmenu{
+    height: 120px;
+}
+.navsubmenu{
+    transition: height 1.2s;
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0%;
+    width: 180px;
+}
+.navsubmenu>li{
+    display: block;
+    background-color: black;
+    line-height: 40px;
+    width: 180px;
+}
+li{
+    border-left: 1px solid rgb(30, 30, 30);
+    border-right: 1px solid rgb(30, 30, 30);
+    text-align: center;
+    line-height: 60px;
+    width: 200px;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #A133F5;
+}
