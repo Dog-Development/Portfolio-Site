@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 body{
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)) , url(background.jpg);
+    background-position: center;
+    background-size: 120px;
     margin: 0;
 }
 h1{
     margin: 0%;
     width: 100%;
     text-align: center;
-    font-family: 'Roboto Slab';
-    line-height: 60px;
-    background-color: #A133F5;
-    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: 'Poiret One';
+    line-height: 80px;
+    background-color: black;
+    color: white;
 }
 nav{
-    background-color: black;
+    background-color: rgb(161, 51, 245);
     display: flex;
+    box-shadow:0px 6px 0px rgb(107, 31, 165);
 }
 .navroot{
     justify-content: space-evenly;
@@ -34,28 +40,33 @@ li>p{
     height:60px;
 }
 .navsubbutton:hover + .navsubmenu{
-    height: 120px;
+    max-height: 200px;
+}
+.navsubmenu:hover{
+    max-height: 200px;
 }
 .navsubmenu{
-    transition: height 1.2s;
+    transition: max-height 1.2s;
     position: absolute;
     overflow: hidden;
-    height: 0px;
+    max-height: 0px;
     margin-left: 10px;
     margin-right: 10px;
     padding: 0%;
-    width: 180px;
+    width: 190px;
 }
 .navsubmenu>li{
+    font-size: medium;
     display: block;
     background-color: black;
     line-height: 40px;
     width: 180px;
 }
 li{
-    border-left: 1px solid rgb(30, 30, 30);
-    border-right: 1px solid rgb(30, 30, 30);
+    border-left: 1px solid rgb(107, 31, 165);
+    border-right: 1px solid rgb(107, 31, 165);
     text-align: center;
+    font-size: 25px;
     line-height: 60px;
     width: 200px;
     display: block;
@@ -64,6 +75,11 @@ a{
     text-decoration: none;
     color: white;
 }
-a:hover{
-    color: #A133F5;
+li:hover{
+    background-color: rgb(68, 18, 107);
+    box-shadow:0px 6px 0px rgb(80, 24, 123);
+}
+.active{
+    background-color: rgb(68, 18, 107) !important;
+    box-shadow:0px 6px 0px rgb(80, 24, 123);
 }
