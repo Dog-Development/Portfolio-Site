@@ -36,58 +36,17 @@ nav{
 li>p{
     margin: 0;
 }
-.navsubbutton{
+.navroot li, .navroot a{
+    border-left: 1px solid rgb(106, 31, 163);
+    border-right: 1px solid rgb(106, 31, 163);
+    text-align: center;
+    display: block;
+    width: 200px;
+    line-height: 60px;
     color: white;
-    height:60px;
-}
-.navsubbutton:hover + .navsubmenu{
-    max-height: 200px;
-}
-.navsubmenu:hover{
-    max-height: 200px;
+    text-decoration: none;
 }
 .navsubmenu{
-    top: 146px;
-    transition: max-height 1.2s;
-    position: absolute;
     overflow: hidden;
     max-height: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 0%;
-    width: 190px;
 }
-.navsubmenu>li{
-    font-size: medium;
-    display: block;
-    background-color: black;
-    line-height: 40px;
-    width: 180px;
-}
-li{
-    border-left: 1px solid rgb(107, 31, 165);
-    border-right: 1px solid rgb(107, 31, 165);
-    text-align: center;
-    font-size: 25px;
-    line-height: 60px;
-    width: 200px;
-    display: block;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-p.navsubbutton:hover{
-    transition: transform 0.5s linear, box-shadow 0.25s step-end;
-    transform: translateY(6px);
-    background-color: rgb(68, 18, 107);
-    box-shadow:0px -6px 0px rgb(80, 24, 123);
-}
-li:hover{
-    background-color: rgb(68, 18, 107);
-    box-shadow:0px 6px 0px rgb(80, 24, 123);
-}
-.active{
-    background-color: rgb(68, 18, 107) !important;
-    box-shadow:0px 6px 0px rgb(80, 24, 123);
-}   
