@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 body{
-    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)) , url(background.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(background.jpg);
     background-position: center;
     background-size: 120px;
     margin: 0;
