@@ -7,6 +7,7 @@ body{
     background-size: 120px;
     margin: 0;
 }
+
 h1{
     margin: 0%;
     width: 100%;
@@ -17,11 +18,13 @@ h1{
     background-color: black;
     color: white;
 }
+
 nav{
     background-color: rgb(161, 51, 245);
     display: flex;
     box-shadow:0px 6px 0px rgb(106, 31, 163);
 }
+
 .navroot{
     justify-content: space-evenly;
     width: 100%;
@@ -33,12 +36,13 @@ nav{
     margin-bottom: 0;
     padding-inline-start: 0px;
 }
-li>p{
-    margin: 0;
+
+.navroot li{
+    border: solid rgb(106, 31, 163);
+    border-width: 0px 1px;
 }
-.navroot li, .navroot a{
-    border-left: 1px solid rgb(106, 31, 163);
-    border-right: 1px solid rgb(106, 31, 163);
+
+.navroot a, .navroot p{
     text-align: center;
     display: block;
     width: 200px;
@@ -46,7 +50,38 @@ li>p{
     color: white;
     text-decoration: none;
 }
+
+.navroot p{
+    margin: 0;
+}
+
+.navsubbutton{
+    position: relative;
+}
+
 .navsubmenu{
+    transition: max-height 1.5s;
+    left: 5%;
+    width: 90%;
+    background-color: black;
     overflow: hidden;
     max-height: 0px;
+    position: absolute;
+    padding: 0%;
+}
+
+.navsubmenu:last-child{
+    border: solid rgb(106, 31, 163);
+    border-width: 0px 0px 1px 0px;
+}
+.navsubbutton:hover>.navsubmenu{
+    max-height: 300px;
+}
+
+.navsubmenu>li:hover{
+    background-color: rgb(82, 16, 133);
+}
+
+.navsubmenu>li>a{
+    width: auto;
 }
