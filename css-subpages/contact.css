@@ -1,0 +1,51 @@
+form{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: dimgray;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form>div{
+    width: 100%;
+}
+
+input{
+    border-radius: 3px;
+    height: 40px;
+}
+
+#email{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#name{
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#fax{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#subject{
+    margin-top: 15px;
+    margin-left: 15px;
+    flex-grow: 2;
+}
+
+#phone{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+textarea{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
