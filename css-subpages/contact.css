@@ -109,36 +109,70 @@ input[type=checkbox]{
     margin-left: 50px;
     height: 32px;
     width: 32px;
+    background-image: url(/media/images/check_FILL0_wght400_GRAD0_opsz48.png);
+    background-position: center center;
+    background-size: 0px 32px;
+    background-clip:border-box;
+    background-repeat: no-repeat;
+    transition: 0.5s;
 }
 
 input[type=checkbox]:checked{
-    background-image: url(/media/images/check_FILL0_wght400_GRAD0_opsz48.png);
     background-size: 32px 32px;
 }
 
 #socialContainer{
     margin-top: 60px;
-    margin-bottom: 60px;
     display: flex;
     justify-content: space-evenly;
 }
 
-a.socialLink{
+.socialLink{
+    overflow: hidden;
+    position: relative;
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.socialLink>span{
+    transition: 0.4s;
+    overflow: hidden;
+    letter-spacing: 10px;
+    font-size: 80px;
+    opacity: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.socialLink:hover>span{
+    font-size: 60px;
+    letter-spacing: -1px;
+    opacity: 100%;
+}
+
+.socialLink>img{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+}
+
+#socialContainer>a:hover{
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+#socialContainer>a{
     justify-content: center;
     display: flex;
-    background: #6B1FA5;
     width: 25vw;
     height: 25vw;
 }
 
-a.socialLink>span{
-    display: none;
-    color: white;
-    font-size: 60px;
-    text-decoration: none;
-    align-self: center;
-}
-
-a.socialLink:hover>span{
-    display: block;
+a.socialLink:hover img{
+    filter: blur(2px);
+    transition: .2s ease-in-out;  
 }
