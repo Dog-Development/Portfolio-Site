@@ -1,4 +1,5 @@
 form{
+    margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
     background-color: dimgray;
@@ -158,6 +159,10 @@ input[type=checkbox]:checked{
     width: inherit;
     height: inherit;
     position: absolute;
+}
+
+#socialLink2>img{
+    transform:scale(1.4);
 }
 
 #socialContainer>a:hover{
