@@ -1,0 +1,63 @@
+#projLinkContainer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.projLink{
+    overflow: hidden;
+    position: relative;
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.projLink>span{
+    transition: 0.4s;
+    overflow: hidden;
+    letter-spacing: 10px;
+    font-size: 100px;
+    max-height: 100px;
+    opacity: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.projLink:hover>span{
+    font-size: 80px;
+    letter-spacing: -1px;
+    opacity: 100%;
+}
+
+.projLink>img{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    object-fit: fill;
+}
+
+#projLink2>img{
+    transform:scale(1.4);
+}
+
+#projLinkContainer>a:hover{
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+#projLinkContainer>a{
+    justify-content: center;
+    display: flex;
+    flex-grow: 1;
+    width: 49vw;
+    height: 49vw;
+}
+
+a.projLink:hover img{
+    filter: blur(2px);
+    transition: .2s ease-in-out;  
+}

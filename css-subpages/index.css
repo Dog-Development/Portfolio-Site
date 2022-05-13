@@ -1,20 +1,7 @@
-.headimg{
-    height: 600px;
-    width: 100%;
-    object-fit: fill;
-}
-
-#headimg2{
-    display: none;
-}
-#headimg3{
-    display: none;
-}
-#headimg4{
-    display: none;
-}
-#headimg5{
-    display: none;
+h2{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #featuredProject{
@@ -35,7 +22,6 @@
     width: 50%;
     max-height: 50vh;
     margin-right: 25px;
-    margin-bottom: 25px;
 }
 
 #featuredProjectHeader{
@@ -60,8 +46,8 @@
     color: #000000;
     margin-top: auto;
     margin-left: auto;
-    bottom: 15px;
-    right: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
 }
 
 #aboutMe{

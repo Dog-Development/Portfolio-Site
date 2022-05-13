@@ -90,9 +90,10 @@ li:not(.navsubmenu>li).active{
     max-height: 0px;
     position: absolute;
     padding: 0%;
+    border: none;
 }
 
-.navsubmenu:last-child{
+.navsubbutton:hover>.navsubmenu:last-child{
     border: solid rgb(106, 31, 163);
     border-width: 0px 0px 1px 0px;
 }
@@ -107,6 +108,25 @@ li:not(.navsubmenu>li).active{
 
 .navsubmenu>li>a{
     width: auto;
+}
+
+.headimg{
+    height: 600px;
+    width: 100%;
+    object-fit: fill;
+}
+
+#headimg2{
+    display: none;
+}
+#headimg3{
+    display: none;
+}
+#headimg4{
+    display: none;
+}
+#headimg5{
+    display: none;
 }
 
 footer{

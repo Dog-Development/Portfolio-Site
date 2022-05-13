@@ -1,0 +1,29 @@
+article{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+article>img{
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+}
+
+article>p{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+aside{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+article:last-of-type{
+    flex-direction: row-reverse;
+}
