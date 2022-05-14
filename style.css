@@ -114,18 +114,6 @@ li:not(.navsubmenu>li).active{
     height: 600px;
     width: 100%;
     object-fit: fill;
-}
-
-#headimg2{
-    display: none;
-}
-#headimg3{
-    display: none;
-}
-#headimg4{
-    display: none;
-}
-#headimg5{
     display: none;
 }
 

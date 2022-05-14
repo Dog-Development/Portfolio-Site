@@ -7,22 +7,21 @@
 
 .projLink{
     overflow: hidden;
-    position: relative;
     color: black;
     font-size: 60px;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
+    transition: .2s ease-in-out;
 }
 
 .projLink>span{
-    transition: 0.4s;
-    overflow: hidden;
+    align-self: center;
+    transition: 0.4s linear;
     letter-spacing: 10px;
-    font-size: 100px;
+    line-height: 90px;
+    font-size: 90px;
     opacity: 0%;
-    margin-top: auto;
-    margin-bottom: auto;
     z-index: 1;
 }
 
@@ -33,14 +32,11 @@
 }
 
 .projLink>img{
+    transition: .2s ease-in-out;
     width: inherit;
     height: inherit;
     position: absolute;
     object-fit: fill;
-}
-
-.projLink:hover{
-    transition: .2s ease-in-out;
 }
 
 .projLink{
@@ -54,5 +50,4 @@
 
 a.projLink:hover img{
     filter: blur(2px);
-    transition: .2s ease-in-out;  
 }
