@@ -1,7 +1,6 @@
 let slideIndex = 0;
     
 function showSlides() {
-  let i;
   let slides = document.getElementsByClassName("headimg");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";

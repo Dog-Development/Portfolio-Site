@@ -13,7 +13,6 @@ h3{
 article>p{
     margin-left: 50px;
     margin-right: 50px;
-    height: 50vh;
 }
 
 hr{
@@ -28,6 +27,7 @@ img{
     height: 90vh;
     width: 100%;
     margin: 0;
+    object-fit: cover;
 }
 
 article ~ hr{

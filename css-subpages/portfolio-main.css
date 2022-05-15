@@ -19,8 +19,7 @@
     align-self: center;
     transition: 0.4s linear;
     letter-spacing: 10px;
-    line-height: 90px;
-    font-size: 90px;
+    text-shadow: 2px 2px 0 white;
     opacity: 0%;
     z-index: 1;
 }
@@ -36,7 +35,7 @@
     width: inherit;
     height: inherit;
     position: absolute;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .projLink{

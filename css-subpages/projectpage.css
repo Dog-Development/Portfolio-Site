@@ -11,15 +11,27 @@ h3{
 }
 
 article>p{
-    margin-left: 50px;
-    margin-right: 50px;
-    height: 50vh;
+    text-align: justify;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 35px;
+}
+
+article>p>a{
+    text-decoration: none;
+    color: rgb(161, 51, 245);
+}
+
+article>p>a:hover{
+    text-shadow: 0px 0px 4px rgb(106, 31, 163);
+    text-decoration: underline;
 }
 
 img{
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     margin: 0;
+    object-fit: cover;
 }
 
 hr{

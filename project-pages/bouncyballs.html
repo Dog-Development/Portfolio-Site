@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncy Balls | Gabriel's Site</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/css-subpages/projectpage.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="../main.js"></script>
+    <style>
+    canvas{
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    footer{
+        margin-top: 0;
+    }
+      </style>
+</head>
+<body>
+<header>
+    <h1>Gabriel Mascarenas - Front End Developer</h1>
+    <nav class="mainnavigation">
+        <ul class="navroot">
+            <li><a href="../index.html">Home</a></li>
+            <li class="navsubbutton"><a href="../aboutme.html">About Me</a>
+                <ul class="navsubmenu">
+                    <li><a href="../about-subpages/achievements.html">Awards & Achievements</a></li>
+                    <li><a href="../about-subpages/fouryearplan.html">My 4-Year Plan</a></li>
+                    <li><a href="../about-subpages/hobbies.html">Hobbies</a></li>
+                    <li><a href="../about-subpages/resume.html">Resume</a></li>
+                </ul>
+            </li>
+            <li class="navsubbutton"><p>Portfolio</p>
+                <ul class="navsubmenu">
+                    <li><a href="../devportfolio.html">Development</a></li>
+                    <li><a href="../psportfolio.html">Photoshop</a></li>
+                    <li><a href="../miscportfolio.html">Other</a></li>
+                </ul>
+            </li>
+            <li><a href="../docs.html">Documents</a>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <article>
+            <h2>Bouncy Balls</h2>
+            <h3>Development</h3>
+            <p>A few of the projects we did at CART I decided to put some extra time and effort into, adding some extra features that weren't necessary but were interesting or fun to make. An example of these assignments is the Bouncy Balls assignment. The task was to create a pretty simple animation using the Canvas API. We all made very similar sites that would generate a screen of colorful bouncy balls that could collide with the edges of the screen and when overlapping with each other change colors rapidly.<br><br>After finishing the assignment I decided to work on adding my own secret function, something I call party mode. In this mode the balls are all replaced with a funny picture of my face, and the text in the top right corner becomes a rainbow to indicate party mode is active. Getting images to display properly in Canvas was difficult to learn how to do. This is where investigation skills are very useful. In order to do what I wanted to do I needed to research not only the Canvas API but specifically all of the image related methods in order to do what I wanted. The project turned out to be a lot of fun and the final product was better than was required or expected. Since this project was never hosted, I can only show you through embedding it on this page, but the Github repository is visible <a href="https://github.com/GabrielCART/BouncyBalls">here</a> if you want to take a look at the source code.</p>
+            <hr>
+            <canvas></canvas>
+        </article>
+    </main>
+    <footer>
+        <p>This page was made by <a href="../aboutme.html">Gabriel Mascarenas</a>.<br>Thank you to <a href="https://www.pexels.com">Pexels</a>, <a href="https://unsplash.com/">Unsplash</a>, and <a href="https://pixabay.com/">Pixabay</a> for providing the stock content used on this site.</p>
+    </footer>
+</body>
+<script>
+    // setup canvas
+
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const width = canvas.width = window.innerWidth;
+    const height = canvas.height = window.innerHeight;
+
+    // function to generate random number
+
+    function random(min, max) {
+    const num = Math.floor(Math.random() * (max - min + 1)) + min;
+    return num;
+    }
+
+    //B A L L   C O N S T R U C T O R
+
+    function Ball(x, y, velX, velY, color, size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+    }
+
+    Ball.prototype.draw = function(){
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+    }
+
+    Ball.prototype.update = function() {
+    if ((this.x + this.size) >= width) {
+        this.velX = -(this.velX);
+    }
+
+    if ((this.x - this.size) <= 0) {
+        this.velX = -(this.velX);
+    }
+
+    if ((this.y + this.size) >= height) {
+        this.velY = -(this.velY);
+    }
+
+    if ((this.y - this.size) <= 0) {
+        this.velY = -(this.velY);
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
+    }
+
+    Ball.prototype.collisionDetect = function() {
+    for (let j = 0; j < balls.length; j++) {
+        if (!(this === balls[j])) {
+        const dx = this.x - balls[j].x;
+        const dy = this.y - balls[j].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + balls[j].size) {
+            balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+        }
+        }
+    }
+    }
+
+    let balls = [];
+
+    while (balls.length < 25) {
+    let size = random(10,20);
+    let ball = new Ball(
+        // ball position always drawn at least one ball width
+        // away from the edge of the canvas, to avoid drawing errors
+        random(0 + size,width - size),
+        random(0 + size,height - size),
+        random(-7,7),
+        random(-7,7),
+        'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')', size);
+    balls.push(ball);
+    }
+
+    function loop() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.fillRect(0, 0, width, height);
+    for (let i = 0; i < balls.length; i++) {
+        balls[i].draw();
+        balls[i].update();
+        balls[i].collisionDetect();
+    }
+    requestAnimationFrame(loop);
+    }
+    loop();
+</script>
+</html>

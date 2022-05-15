@@ -13,6 +13,7 @@ article>img{
 }
 
 article>p{
+    font-size: 30px;
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -24,6 +25,6 @@ aside{
     margin-bottom: 25px;
 }
 
-article:last-of-type{
+/* article:last-of-type{
     flex-direction: row-reverse;
-}
+} */

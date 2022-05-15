@@ -4,14 +4,16 @@ article{
     margin-right: 80px;
     margin-top: 42px;
     height: 240px;
-    background-color: dimgray;
+    background-color: rgb(50, 50, 50);
     flex-direction: row;
 }
 
 article>img{
+    object-fit: cover;
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 200px;
 }
 
 article>section>h2{
